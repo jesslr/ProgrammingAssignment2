@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## cachematrix.R was written to demonstrate use of <<- assignment.  The two functions allow
+## the user to create a matrix and store the inverse of the matrix in cache.  When cacheSolve is called
+## it will either used the cached inverse or compute the inverse of the matrix.
 
-## Write a short comment describing this function
+## makeCacheMatrix creates a matrix that can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -18,7 +19,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve computes the inverse of the matrix created by makeCacheMatrix.  
+## If cached and unchanged, it won't compute the inverse, but return cached result.
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
